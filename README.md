@@ -8,6 +8,6 @@
 
 # BONUS
 - [x] les title, content de tes articles, email de tes users ont une validation à la présence
-- [] On aimerait qu'un user puisse décider qu'un de ses articles soit privé. Quand c'est le cas, l'article n'est visible que par le user.
+- [x] On aimerait qu'un user puisse décider qu'un de ses articles soit privé. Quand c'est le cas, l'article n'est visible que par le user.
 - [X] Création de commentaires. Un commentaire est créé par un user et seul le user peut le modifier/supprimer. Les commentaires peuvent être consultés en faisant /articles/3/comments.json qui récupèrera par exemple les commentaires de l'article 3.
 - [] Images

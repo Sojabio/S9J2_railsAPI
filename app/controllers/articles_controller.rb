@@ -41,6 +41,23 @@ class ArticlesController < ApplicationController
     @article.destroy
   end
 
+  #hides the post if decided by the user
+  def hide
+    @article = Article.find(params[:id])
+
+    if @article
+      @article.hidden = true
+      if @article.save
+        render json: { message: "L'article a été caché." }
+      else
+        render json: { error: "L'article n'a pas pu être caché." }, status: :unprocessable_entity
+      end
+    else
+      render json: { error: "L'article n'a pas pu être caché." }, status: :unprocessable_entity
+    end
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_article
@@ -49,13 +66,12 @@ class ArticlesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def article_params
-      params.require(:article).permit(:title, :content, :user_id)
+      params.require(:article).permit(:title, :content, :user_id, :hidden)
     end
 
     def user_is_current_user
       unless current_user == @article.user
-        flash[:alert] = "Accès non autorisé"
-        redirect_to root_path
+        render json: { error: "Accès non autorisé" }, status: :unauthorized
       end
     end
 

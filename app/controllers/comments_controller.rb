@@ -56,8 +56,7 @@ class CommentsController < ApplicationController
 
     def user_is_current_user
       unless current_user == @article.user
-        flash[:alert] = "Accès non autorisé"
-        redirect_to root_path
+        render json: { error: "Accès non autorisé" }, status: :unauthorized
       end
     end
 end

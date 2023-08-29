@@ -17,6 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_29_103909) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "content"
+    t.boolean "hidden", default: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -3,6 +3,7 @@ class CreateArticles < ActiveRecord::Migration[7.0]
     create_table :articles do |t|
       t.string :title
       t.text :content
+      t.boolean :hidden, default: false
 
       t.belongs_to :user, index:true
 
