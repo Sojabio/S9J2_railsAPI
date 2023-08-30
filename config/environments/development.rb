@@ -40,9 +40,9 @@ Rails.application.configure do
 
   # config.action_mailer.default_url_options = { host: 'http://127.0.0.1', port: '5173' }
   # config.action_mailer.default_url_options = { host: 'testapiback.fly.dev' }
-  config.action_mailer.default_url_options = { :host => 'https://testapiback.fly.dev' }
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.default_url_options = { :host => 'https://testapiback.fly.dev' }
+  # config.action_mailer.perform_deliveries = true
+  # config.action_mailer.delivery_method = :smtp
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

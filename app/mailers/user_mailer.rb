@@ -11,4 +11,9 @@ class UserMailer < Devise::Mailer
     super
   end
 
+  # def reset_password_instructions(record, token, opts = {})
+  #   @reset_password_url = edit_password_url(record, reset_password_token: token)
+  #   mail(to: record.email, subject: 'Reset Your Password')
+  # end
+
 end
