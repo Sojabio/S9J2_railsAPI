@@ -85,6 +85,12 @@ GEM
     devise-jwt (0.11.0)
       devise (~> 4.0)
       warden-jwt_auth (~> 0.8)
+    dockerfile-rails (1.5.3)
+      rails
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     dry-auto_inject (1.0.1)
       dry-core (~> 1.0)
       zeitwerk (~> 2.6)
@@ -174,6 +180,11 @@ GEM
     responders (3.1.0)
       actionpack (>= 5.2)
       railties (>= 5.2)
+    sentry-rails (5.10.0)
+      railties (>= 5.0)
+      sentry-ruby (~> 5.10.0)
+    sentry-ruby (5.10.0)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
     thor (1.2.2)
     timeout (0.4.0)
     tzinfo (2.0.6)
@@ -198,11 +209,15 @@ DEPENDENCIES
   debug
   devise (~> 4.9)
   devise-jwt (~> 0.11.0)
+  dockerfile-rails (>= 1.5)
+  dotenv-rails
   faker
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors (~> 2.0)
   rails (~> 7.0.7, >= 7.0.7.2)
+  sentry-rails (~> 5.10)
+  sentry-ruby (~> 5.10)
   tzinfo-data
 
 RUBY VERSION

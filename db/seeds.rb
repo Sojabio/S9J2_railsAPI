@@ -18,7 +18,7 @@ User.destroy_all
 end
 
 # generate 10 articles
-(1..10).each do |id|
+40.times do |id|
   Article.create!(
       title: Faker::Book.title,
       content: Faker::Quotes::Shakespeare.king_richard_iii_quote,

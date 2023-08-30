@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem 'dotenv-rails'
 gem 'faker'
 
 ruby "3.2.2"
@@ -52,3 +53,9 @@ end
 gem "devise", "~> 4.9"
 gem "devise-jwt", "~> 0.11.0"
 gem "rack-cors", "~> 2.0"
+
+gem "dockerfile-rails", ">= 1.5", :group => :development
+
+gem "sentry-ruby", "~> 5.10"
+
+gem "sentry-rails", "~> 5.10"
